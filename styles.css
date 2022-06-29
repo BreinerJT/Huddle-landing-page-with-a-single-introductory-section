@@ -1,0 +1,145 @@
+/* headings 
+*/
+
+/* body 
+*/
+:root{
+    --violet: hsl(257, 40%, 49%);
+    --magenta: hsl(300, 69%, 71%);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background: url(./images/bg-mobile.svg) center no-repeat var(--violet);
+    color: white;
+}
+h1{
+    font-family: 'Poppins', sans-serif;
+}
+p{
+    font-family: 'Open Sans', sans-serif;
+}
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+section{
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    justify-content: center;
+    width: 100%;
+}
+header{
+    width: 100%;
+    display: grid;
+    justify-content: center;
+    max-width: 500px;
+    margin: 0 auto;
+}
+.logo{
+    width: 200px;
+    position: relative;
+    top: 0;
+    left: 0;
+    padding: 2rem 0 1rem 2rem;
+}
+.hero{
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 3rem;
+}
+.info-section{
+    max-width: 400px;
+    text-align: center;
+    margin: 1rem auto;
+    padding: 0 3rem;
+}
+.info-section p{
+    max-width: 450px;
+    margin: 1rem 0;
+}
+.register-btn{
+    border: 1px solid transparent;
+    color: var(--violet);
+    font-family: "Poppins", sans-serif;
+    width: 75%;
+    border-radius: 30px;
+    padding: 0.75rem 1rem;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 400;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+.register-btn:hover{
+    border: 1px solid var(--magenta);
+    color: white;
+    background-color: var(--violet);
+}
+footer{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin-top: 4rem;
+}
+a{
+    margin: 0.5rem;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    border: 1px solid white;
+}a:nth-of-type(1) .ionicon{
+    padding-left: 0.5rem;
+    padding-top: 0.35rem;
+}
+.ionicon{
+    fill: white;
+    padding: 0.25rem;
+}
+@media screen and (min-width: 992px) {
+    body{
+        background: url(./images/bg-desktop.svg) center no-repeat var(--violet);
+    }
+    section{
+        display: flex;
+        align-items: center;
+    }
+    .logo{
+        margin-top: -8rem;
+    }
+    .info-section{
+        padding: 0;
+        text-align: left;
+        justify-content: flex-start;
+        margin-left: 0;
+    }
+    .info-section h1{
+        padding-right: 5rem;
+    }
+    .info-section p{
+        font-size: 14px;
+    }
+    .register-btn{
+        width: 35%;
+    }
+    footer{
+        position: absolute;
+        bottom: 2rem;
+        right: 10rem;
+        justify-content: flex-end;
+    }
+    a{
+        margin: 0.5rem;
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        border: 1px solid white;
+    }
+
+}
